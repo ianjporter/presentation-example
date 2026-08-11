@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
+<head>
+  <meta charset="utf-8">
+  <title>My First reveal.js Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>reveal.js</title>
+  <!-- Core reveal.js Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+  <!-- Theme choice: 'black', 'white', 'league', 'beige', 'night', etc. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
+</head>
+<body>
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+  <div class="reveal">
+    <div class="slides">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+      <!-- Slide 1: Simple Horizontal Slide -->
+      <section>
+        <h1>Welcome to reveal.js</h1>
+        <p>Use the <strong>arrow keys</strong> or spacebar to navigate.</p>
+      </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="dist/plugin/notes.js"></script>
-		<script src="dist/plugin/markdown.js"></script>
-		<script src="dist/plugin/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      <!-- Slide 2: Markdown or Plain HTML content -->
+      <section>
+        <h2>Key Advantages</h2>
+        <ul>
+          <li>Open source and web-standard</li>
+          <li>Version control with Git</li>
+          <li>Full CSS flexibility</li>
+        </ul>
+      </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
-		</script>
-	</body>
+      <!-- Slide 3: Vertical Slide Group (Nested Sections) -->
+      <section>
+        <section>
+          <h2>Vertical Slide Stack (Top)</h2>
+          <p>Press the <strong>down arrow</strong> to see more detail.</p>
+        </section>
+        <section>
+          <h2>Vertical Slide Stack (Bottom)</h2>
+          <p>Press the <strong>up arrow</strong> to return or <strong>right arrow</strong> to continue.</p>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js Core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <script>
+    // Initialize reveal.js with standard configuration
+    Reveal.initialize({
+      hash: true,          // Updates URL with current slide number (#/1, #/2/1)
+      controls: true,      // Show navigation arrows in bottom right
+      progress: true       // Show progress bar at bottom
+    });
+  </script>
+</body>
 </html>
